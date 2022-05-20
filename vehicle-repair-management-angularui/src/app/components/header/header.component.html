@@ -1,0 +1,28 @@
+<ul class="nav rounded">
+    <li class="nav-item">
+        <img src="assets/images/car-banner.png" height=55 width=80 class="ms-2 me-2">
+    </li>
+    <li class="nav-item">
+        <h2 class="nav text-white"><b>Vehicle Repair Management</b></h2>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['home']"
+      style='margin-left: 60px;'><b>Home</b></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['vehiclelist']"><b>Repair List</b></a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" [routerLink]="['addvehicle']"><b>Add Vehicle</b></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['contactus']"><b>Contact Us</b></a>
+    </li>
+    <li class="nav-item">
+    <button class="btn btn-danger rounded-pill my-2 ms-3" (click)="logout()"><b>Logout</b></button>
+    </li>
+    <li class="nav-item text-white">
+      <h5 id="userId" >Welcome {{userName}} !!!</h5>
+    </li>
+    
+</ul>

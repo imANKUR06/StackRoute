@@ -1,0 +1,10 @@
+#idOrName{
+    align-self: center;
+    height: 50%;
+}
+#search{
+    align-self: center;
+    height: 50%;
+    width: 34px;
+    margin: 0px 18px;
+}

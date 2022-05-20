@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "27ef21b6-b0b7-46b5-ae9d-9790534b9b83": {
+      "ProjectGuid": "27ef21b6-b0b7-46b5-ae9d-9790534b9b83",
+      "DisplayName": "Vehicle-Repair-Management-WebAPI",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

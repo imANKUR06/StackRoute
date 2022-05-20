@@ -1,0 +1,21 @@
+ul{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: black;
+    /* background-image: url("https://img.freepik.com/free-photo/blue-green-wall-background_23-2148992851.jpg?size=626&ext=jpg"); */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+a{
+    color: white;
+    padding-top: 15px;
+    font-weight: bold;
+}
+button{   
+    font-weight: bold;
+}
+#userId{
+    padding: 13px 70px;
+    font-weight: bold;
+}

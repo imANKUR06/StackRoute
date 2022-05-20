@@ -1,0 +1,58 @@
+<section class="vh-150" style="background-color: steelblue;">
+    <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center h-100">
+    <div class="col-8">
+    <div class="card shadow-2-strong" style="border-radius: 1rem;">
+    <div class="card-body p-5 text-right">
+
+        <div class="row">
+            <div class="col-6" style="background-color:lightsteelblue">
+                <h1 class="text-center"><img src="assets/images/login-page.png" height=150
+                        width=150></h1>
+                        <h2 class="text-center" id="vrmId">VRM Service</h2><br>
+                        <h5 class="text-center" id="registerId">Already have an account ?...&nbsp;&nbsp;
+                            <a [routerLink]="['/login']">Log In</a>
+                    </h5>
+            </div>
+            <div class="col-6">
+                <div class="btn-group d-flex" role="group" aria-label="...">
+                    <button class="btn btn-outline-primary" [routerLink]="['/login']"><b>Log In</b></button>
+                    <button class="btn btn-primary" [routerLink]="['/register']"><b>Register</b></button>
+                </div><br>
+                <form #loginForm="ngForm" (ngSubmit)="register()">
+                    <div class="form-group">
+                        <label for="username" class="form-label"><b>Username</b></label>
+                        <input type="text" class="form-control" name="username" id="userName"
+                        [(ngModel)]="registrationData.username" #username="ngModel" required>     
+                        <p *ngIf="username.invalid && username.touched" 
+                           class="alert alert-danger">Username is mandatory</p>
+                        </div><br>  
+
+                        <div class="form-group">
+                            <label for="email" class="form-label"><b>Email</b></label>
+                            <input type="text" class="form-control" name="email" id="email" 
+                            [(ngModel)]="registrationData.email" #email="ngModel" required>     
+                            <p *ngIf="email.invalid && email.touched" 
+                               class="alert alert-danger">Email is mandatory</p>
+                            </div><br> 
+                              
+                    <div class="form-group">
+                        <label for="password" class="form-label"><b>Password</b></label>
+                        <input type="password" class="form-control" name="password" id="password" 
+                        [(ngModel)]="registrationData.password" #password="ngModel" required>     
+                        <p *ngIf="password.invalid && password.touched" 
+                           class="alert alert-danger">Password is mandatory</p>
+                        </div><br>
+                
+                    <button [disabled]="loginForm.invalid" class="btn btn-primary" type="submit">
+                        <b>Register</b></button>
+                </form>
+            </div>
+        </div>    
+    
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>

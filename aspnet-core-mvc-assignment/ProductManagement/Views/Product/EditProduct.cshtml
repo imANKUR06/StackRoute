@@ -1,0 +1,31 @@
+﻿@model ProductCreateViewModel
+<h1>Edit Product Details</h1>
+
+
+
+
+<form asp-controller="Product" asp-action="EditProduct" method="post">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control" />
+
+
+    </div>
+    <div class="form-group">
+        <label asp-for="Amount"></label>
+        <input asp-for="Amount" class="form-control" />
+        <span asp-validation-for="Amount" class="text-danger"></span>
+
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Edit</button>
+</form>
+

@@ -1,0 +1,61 @@
+<br>
+<div class="header mx-1 roundeds row" style="margin-bottom: 30px; border-radius: 15px;background-color: #3a83bf;">
+    <h3 class="ms-4 col"><b><u>Vehicle Repair List</u></b>
+        <img src="assets/images/list.png" class="ms-3" width="70" height="60">
+    </h3>
+    <input type="text" class="form-control col " name="idOrName" [(ngModel)]="searchName" id="idOrName" placeholder="Enter Name">
+    <button class="btn btn-sm " id="search" style="background-color:#4caf50 ;color: aliceblue;" (click)="findByName()" [disabled]="searchName===''"><b>Go</b></button>
+
+    <input type="text" class="form-control col " name="idOrName" [(ngModel)]="searchId" id="idOrName" placeholder="Enter Id">
+    <button class="btn btn-sm " style="background-color:#4caf50 ;color: aliceblue;" id="search" (click)="findById()" [disabled]="searchId===''"><b>Go</b></button>
+    <button class="btn btn-sm " style="background-color:#4caf50 ;color: aliceblue;" id="search" (click)="findAll()" ><b>All</b></button>
+</div>
+
+<table class='table table-striped text-center
+      mb-4'>
+    <thead class='bg-warning'>
+        <tr>
+            <th>Id</th>
+            <th>Vehicle Name</th>
+            <th>Vehicle Type</th>
+            <th>Vehicle Category</th>
+            <th>Vehicle Complaint</th>
+            <th>Created Date</th>
+            <th>Repair Cost</th>
+            <th>Created By</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <div *ngIf="!isVehiclesAvailable">
+            <p style="margin-left: 50px;">No records found</p>
+        </div>
+        <ng-container *ngFor="let v of vehicles">
+            <ng-container *ngIf="showVehicleDetails">
+                <tr>
+                    <td>{{v.id}}</td>
+                    <td>{{v.name}}</td>
+                    <td>{{v.type}}</td>
+                    <td>{{v.category}}</td>
+                    <td>{{v.complaint}}</td>
+                    <td>{{v.date | date:'dd-MM-yyyy'}}</td>
+                    <td>{{v.cost}}</td>
+                    <td>{{v.username}}</td>
+                    <td><i class="fa fa-edit"></i><span>&nbsp;</span>
+                        <a [routerLink]="['/editvehicle/'+v.id]"><b>Edit</b></a>
+                    </td>
+                    <td><i class="fa fa-trash"></i><span>&nbsp;</span>
+                        <a [routerLink]="['/deletevehicle/'+v.id]"><b>Delete</b></a>
+                    </td>
+
+                </tr>
+            </ng-container>
+        </ng-container>
+    </tbody>
+</table>
+<button (click)="showHideVehicleDetails()" type="button" class="btn btn-primary btn-sm ms-3 me-5"><b>
+        {{showVehicleDetails?'Hide':'Show'}} Vehicles</b></button>
+<button [routerLink]="['/addvehicle']" type="button" class="btn btn-primary btn ms-3"><b>
+        Add Vehicle</b></button>
+<br><br>

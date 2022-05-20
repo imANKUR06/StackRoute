@@ -1,0 +1,13 @@
+h3{
+    margin-left: 50px;
+}
+p{
+    margin-left: 70px;
+}
+body{    
+    color: white;
+    font-weight: bold;
+    background-color: red;
+    height: 410px;
+    border-radius: 7px;
+}

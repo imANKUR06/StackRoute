@@ -1,0 +1,59 @@
+
+
+
+<!-- HTML CSS NEw -->
+
+
+
+<div class="container" style="margin-bottom: 30px;margin-top: 100px;">
+  <p  [class]="classStyle">{{message}} </p>
+    <div class="row">
+        <div class="col-1">
+
+        </div>
+        <div class="col-10">
+          <form #addForm="ngForm" class="form-control" style="background-color: rgb(66, 104, 226);padding-top: 30px;padding-bottom: 30px;" (ngSubmit)="addMusic()">
+            <div class="form-group" style="margin-bottom: 10px;">
+               
+                <label style="color: whitesmoke;" for="language" id="language">Music Language</label>
+                <input type="text" class="form-control" id="language" [(ngModel)]="music.language"  placeholder="Enter language" name="language" #language ="ngModel"  required>
+                <p class="alert alert-danger" *ngIf="language.invalid && language.touched">Please Type Language</p>
+              </div>
+
+             
+              <label style="color: whitesmoke;" for="category" id="category">Music Category</label>
+              <select class="form-select" [(ngModel)]="music.category" name="category" id="category" #category ="ngModel" required>
+                <option  selected>Melody</option>
+                <option  >Rock</option>
+                <option  >Soft</option>
+                <option  >Inspiring</option>
+                <option  >Meditation</option>
+              </select>
+              <p class="alert alert-danger" *ngIf="category.invalid && category.touched">Please Type Category</p>
+
+            <div class="form-group" style="margin-bottom: 10px;">
+                
+              <label  style="color: whitesmoke;" for="singer">Singer</label>
+              <input type="text" [(ngModel)]="music.singer" class="form-control" id="singer" placeholder="Enter singer" name="singer" #singer ="ngModel" required>
+              <p class="alert alert-danger" *ngIf="singer.invalid && singer.touched">Please Type Singer</p>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 10px;">
+                
+                <label  style="color: whitesmoke;" for="type">Music Type</label>
+                <input type="text" class="form-control" id="type" placeholder="Enter type" name="type" [(ngModel)]="music.type" #type ="ngModel" required>
+                <p class="alert alert-danger" *ngIf="type.invalid && type.touched">Please Type Music Type</p>
+            </div>
+            <h1 style="text-align: center;"><button [disabled] = "addForm.invalid" type="submit" class="btn btn-danger">Save</button></h1>
+          </form>
+           
+        </div>
+        <div class="col-1">
+            
+        </div>
+    </div>
+
+</div>
+
+
+
