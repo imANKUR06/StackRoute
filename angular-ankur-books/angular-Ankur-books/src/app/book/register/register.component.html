@@ -1,0 +1,39 @@
+
+
+<!-- new html -->
+
+<div class="container" style="margin-bottom: 30px;margin-top: 150px;">
+  <div class="row">
+      <div class="col-2">
+
+      </div>
+      <div class="col-8">
+        <form class="form-control" style="background-color: rgb(66, 104, 226);padding-top: 30px;padding-bottom: 30px;" (ngSubmit)="register()">
+          <div class="mb-3">
+            <label for="username" class="form-label">UserName</label>
+            <input type="text" class="form-control" name="username" id="username" [(ngModel)]="RegisterBook.username"  > 
+            <!-- <p  class="alert alert-danger">User Name is Mandatory </p>     -->
+          </div>
+      
+          <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" name="email" id="email" [(ngModel)]="RegisterBook.email"  > 
+              <!-- <p  class="alert alert-danger">User Name is Mandatory </p>     -->
+            </div>
+      
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" id="password" [(ngModel)]="RegisterBook.password" >
+            <!-- <p *ngIf="password.invalid && password.touched" class="alert alert-danger">User Name is Mandatory </p>  -->
+          </div>
+          
+          <button type="submit" class="btn btn-danger">Submit</button> 
+          <a [routerLink]="['/routePath']" routerLinkActive="router-link-active" ></a>
+      </form>
+      </div>
+      <div class="col-2">
+          
+      </div>
+  </div>
+
+</div>

@@ -1,0 +1,39 @@
+
+<h1 style="text-align: center; color: whitesmoke;background-color: rgba(186, 180, 17, 0.72);padding-bottom: 10px;">Books By Name</h1>
+<hr>
+<br>
+<div class="container">
+<br>
+<!-- <div *ngIf="!isBookDataAvailable">
+    <p>Loading...</p>
+</div> -->
+
+
+<table class="table shadow p-3 mb-5 rounded" style="background-color: whitesmoke;" >
+    <thead >
+    <tr class="table-dark">
+        <td>Id</td>
+        <td>Name</td>
+        <td>Description</td>
+        <td>Amount</td>
+        <td>Author</td>
+        <td></td>
+        <td></td>
+    </tr>
+    </thead>
+    <tbody>
+    <ng-container *ngFor="let e of book" >
+        <tr >
+            <td >{{e.id}}</td>
+            <td class="table-striped">{{e.name}}</td>
+            <td>{{e.description}}</td>
+            <td class="table-striped">{{e.amount}}</td>
+            <td>{{e.author}}</td>
+            
+        </tr>
+
+    </ng-container>
+</tbody>
+  </table>
+  <h1 style="text-align: center;"><button style="position: absolute;" class="btn btn-primary">Click</button></h1>
+</div>
